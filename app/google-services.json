@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "717845407842",
+    "firebase_url": "https://proyectonosql-1c833.firebaseio.com",
+    "project_id": "proyectonosql-1c833",
+    "storage_bucket": "proyectonosql-1c833.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717845407842:android:d842af33038fad5c",
+        "android_client_info": {
+          "package_name": "info.androidhive.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717845407842-4ipifup6mn2mg34mhflsngbijvjt2fid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.androidhive.firebase",
+            "certificate_hash": "cde548883a5605d23c06a968cab93668a2b98a0f"
+          }
+        },
+        {
+          "client_id": "717845407842-c23cl3tgn98goo8psfkjomd4crllp05i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-IKV7wlSaDUmnbppyFxKGAfN0co7AygI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717845407842-c23cl3tgn98goo8psfkjomd4crllp05i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717845407842:android:7b4aab0d2fc4f68f",
+        "android_client_info": {
+          "package_name": "com.questdot.firebasedatabaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717845407842-uta5vaemil13ogfbhhi5ouauhtcvl5l3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.questdot.firebasedatabaseexample",
+            "certificate_hash": "cde548883a5605d23c06a968cab93668a2b98a0f"
+          }
+        },
+        {
+          "client_id": "717845407842-c23cl3tgn98goo8psfkjomd4crllp05i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-IKV7wlSaDUmnbppyFxKGAfN0co7AygI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717845407842-c23cl3tgn98goo8psfkjomd4crllp05i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
