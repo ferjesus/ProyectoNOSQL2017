@@ -22,7 +22,7 @@
             android:layout_margin="8dp"
             android:gravity="center"
             android:hint="Enter Name"
-           />
+            />
 
         <EditText
             android:id="@+id/writeage"
@@ -32,7 +32,7 @@
             android:gravity="center"
             android:hint="Enter Age"
             android:inputType="number"
-           />
+            />
 
         <Button
             android:id="@+id/submit"
@@ -62,14 +62,14 @@
                 android:id="@+id/btn_search"/>
         </LinearLayout>
 
-            <ListView
+        <ListView
 
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/readlist">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/readlist">
 
 
-            </ListView>
+        </ListView>
 
 
     </LinearLayout>
