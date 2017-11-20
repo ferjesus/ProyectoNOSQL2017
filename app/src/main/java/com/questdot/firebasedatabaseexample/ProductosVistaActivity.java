@@ -84,7 +84,7 @@ public class ProductosVistaActivity extends Activity {
 
                             databaseReference.child(data.getKey()).setValue(data);
 
-                            Toast.makeText(getApplicationContext(), "Resgistrado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Resgistrado!", Toast.LENGTH_SHORT).show();
 
                             txtname.setText("");
                             txtprecio.setText("");
