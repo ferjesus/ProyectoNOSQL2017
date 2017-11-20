@@ -21,7 +21,18 @@
             android:name=".MainActivity"
             android:label="PRODUCTOS">
             <intent-filter>
-                <action android:name="com.example.fer.gamestore.tabs.TabsMain" />
+                <action android:name="com.questdot.firebasedatabaseexample.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ProductosVistaActivity"
+            android:label="PRODUCTOS">
+            <intent-filter>
+                <action android:name="com.questdot.firebasedatabaseexample.ProductosVistaActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

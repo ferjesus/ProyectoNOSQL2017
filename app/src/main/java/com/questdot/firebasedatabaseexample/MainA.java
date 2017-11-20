@@ -54,8 +54,8 @@ public class MainA extends AppCompatActivity {
 
     public void Onclick(View v)
     {
-       // Intent ven=new Intent(this,Main.class);
-       // startActivity(ven);
+        Intent ven=new Intent(this,ProductosVistaActivity.class);
+       startActivity(ven);
     }
     public void OnclickShop(View v)
     {

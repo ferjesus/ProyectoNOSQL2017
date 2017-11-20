@@ -10,18 +10,18 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class CustomAdapter extends BaseAdapter {
+public class CustomAdapter1 extends BaseAdapter {
 
     TextView name, age;
 
     Context context;
 
-    ArrayList<Data> data;
+    ArrayList<Producto> data;
 
 
     LayoutInflater inflater;
 
-    public CustomAdapter(Context context, ArrayList<Data> data) {
+    public CustomAdapter1(Context context, ArrayList<Producto> data) {
         this.context = context;
         this.data = data;
     }
@@ -52,7 +52,7 @@ public class CustomAdapter extends BaseAdapter {
 
 
         name.setText(name.getText()+data.get(i).getName());
-        age.setText(age.getText()+""+ data.get(i).getAge());
+        age.setText(age.getText()+""+ data.get(i).getPrecio());
 
 
 
