@@ -105,7 +105,7 @@ public class Listaproductos extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-
+                final String imagen1 = dataArrayList.get(temp).getLink();
                 final View v = inflater1.from(getApplicationContext()).inflate(R.layout.custom_alert, null);
                 temp = i;
 
@@ -123,7 +123,7 @@ public class Listaproductos extends Activity {
                     public void onClick(View view) {
 
                         Producto tempData = new Producto(dataArrayList.get(temp).getKey(), updtname.getText().toString().trim(),
-                                Integer.parseInt(updtage.getText().toString().trim()));
+                                Integer.parseInt(updtage.getText().toString().trim()),imagen1);
 
                         databaseReference.child(dataArrayList.get(temp).getKey()).setValue(tempData);
 
