@@ -29,20 +29,19 @@ public class ProductosVistaActivity extends Activity {
     int age;
     String name;
 
-    EditText txtname, txtage,txtsearch;
+    EditText txtname, txtprecio,txtsearch,txtlink;
 
     FirebaseDatabase firebaseDatabase;
 
     DatabaseReference databaseReference;
 
-    Data data;
+    Producto data;
 
 
-    ListView listView;
 
-    ArrayList<Data> dataArrayList;
+    ArrayList<Producto> dataArrayList;
 
-    CustomAdapter customAdapter;
+    CustomAdapter1 customAdapter;
 
     String key;
 
@@ -54,12 +53,12 @@ public class ProductosVistaActivity extends Activity {
         setContentView(R.layout.productosvista);
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        databaseReference = firebaseDatabase.getReference().child("Students");
+        databaseReference = firebaseDatabase.getReference().child("Productos");
         key=databaseReference.push().getKey();
 
-        txtname = (EditText) findViewById(R.id.writename);
-        txtage = (EditText)findViewById(R.id.writeage);
-        listView = (ListView) findViewById(R.id.readlist);
+        txtname = (EditText) findViewById(R.id.pnombre);
+        txtprecio = (EditText)findViewById(R.id.precio);
+        txtlink = (EditText)findViewById(R.id.link);
 
           findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,20 +72,20 @@ public class ProductosVistaActivity extends Activity {
 
                         if (TextUtils.isEmpty(name) ) {
 
-                            Toast.makeText(getApplicationContext(), "Please Enter Name", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Ingrese un Nombre", Toast.LENGTH_SHORT).show();
 
                         } else {
 
-                            age = Integer.parseInt(txtage.getText().toString().trim());
+                            age = Integer.parseInt(txtprecio.getText().toString().trim());
 
-                            data = new Data(databaseReference.push().getKey(), name, age);
+                            data = new Producto(databaseReference.push().getKey(), name, age);
 
                             databaseReference.child(data.getKey()).setValue(data);
 
-                            Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Resgistrado", Toast.LENGTH_SHORT).show();
 
                             txtname.setText("");
-                            txtage.setText("");
+                            txtprecio.setText("");
 
                         }
                     } catch (Exception e) {
@@ -101,16 +100,15 @@ public class ProductosVistaActivity extends Activity {
 
         dataArrayList = new ArrayList<>();
 
-        customAdapter = new CustomAdapter(ProductosVistaActivity.this, dataArrayList);
+        customAdapter = new CustomAdapter1(ProductosVistaActivity.this, dataArrayList);
 
-        listView.setAdapter(customAdapter);
 
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-                Data datam = dataSnapshot.getValue(Data.class);
+                Producto datam = dataSnapshot.getValue(Producto.class);
 
                 dataArrayList.add(datam);
 
@@ -139,89 +137,6 @@ public class ProductosVistaActivity extends Activity {
         });
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-                final View v = inflater1.from(getApplicationContext()).inflate(R.layout.custom_alert, null);
-                temp = i;
-
-                final EditText updtname, updtage;
-
-                updtname = (EditText) v.findViewById(R.id.updtname);
-                updtage = (EditText) v.findViewById(R.id.updtage);
-
-
-                final AlertDialog.Builder builder  = new AlertDialog.Builder(ProductosVistaActivity.this).setView(v);
-                final AlertDialog alert = builder.create();
-
-                v.findViewById(R.id.update).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                        Data tempData = new Data(dataArrayList.get(temp).getKey(), updtname.getText().toString().trim(),
-                                Integer.parseInt(updtage.getText().toString().trim()));
-
-                        databaseReference.child(dataArrayList.get(temp).getKey()).setValue(tempData);
-
-                        dataArrayList.remove(temp);
-
-                        dataArrayList.add(temp,tempData);
-
-                        customAdapter.notifyDataSetChanged();
-                    }
-                });
-
-                v.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if(temp == -1){
-
-                            Toast.makeText(getApplicationContext(), "There is no data to delete", Toast.LENGTH_SHORT).show();
-
-                        }else {
-
-                            databaseReference.child(dataArrayList.get(temp).getKey()).removeValue();
-
-                            dataArrayList.remove(temp);
-
-                            customAdapter.notifyDataSetChanged();
-
-                           alert.cancel();
-
-                            temp = -1;
-                        }
-                    }
-                });
-
-
-
-                updtname.setText(dataArrayList.get(temp).getName());
-
-                updtage.setText("" + dataArrayList.get(temp).getAge());
-
-
-
-                try {
-
-
-                    alert.show();
-
-                } catch (Exception e) {
-
-                    Log.d("show", "onItemClick: " + e);
-
-                }
-
-
-
-
-                return;
-
-
-            }
-        });
 
         txtsearch = (EditText) findViewById(R.id.search);
 
@@ -239,17 +154,6 @@ public class ProductosVistaActivity extends Activity {
 
 
 
-                        for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-
-                            data = dataSnapshot1.getValue(Data.class);
-                            dataArrayList.clear();
-                            dataArrayList.add(data);
-                            Log.d("log", "onDataChange: "+dataSnapshot1.child("name").getValue());
-
-                        }
-
-
-                        func();
 
 
 
@@ -284,7 +188,7 @@ public class ProductosVistaActivity extends Activity {
                 dataArrayList.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
 
-                    data = dataSnapshot1.getValue(Data.class);
+                    data = dataSnapshot1.getValue(Producto.class);
 
                     dataArrayList.add(data);
 
@@ -303,20 +207,5 @@ public class ProductosVistaActivity extends Activity {
     });
 }
 
-    public void func(){
 
-        if(count!=0){
-
-            customAdapter = new CustomAdapter(getApplicationContext(),dataArrayList);
-
-            listView.setAdapter(customAdapter);
-
-        }else {
-
-            Toast.makeText(getApplicationContext(), "There is no data to show", Toast.LENGTH_SHORT).show();
-            listView.setVisibility(View.GONE);
-        }
-
-
-    }
 }
