@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class CustomAdapter1 extends BaseAdapter {
 
-    TextView name, age;
+    TextView name, precio, link;
 
     Context context;
 
@@ -48,11 +48,12 @@ public class CustomAdapter1 extends BaseAdapter {
         view = inflater.from(context).inflate(R.layout.custom_list,viewGroup,false);
 
         name = (TextView) view.findViewById(R.id.readname);
-        age = (TextView) view.findViewById(R.id.readage);
+        precio = (TextView) view.findViewById(R.id.readage);
+        link = (TextView) view.findViewById(R.id.readlink);
 
-
-        name.setText(name.getText()+data.get(i).getName());
-        age.setText(age.getText()+""+ data.get(i).getPrecio());
+        name.setText(name.getText()+""+data.get(i).getnombre());
+        precio.setText(precio.getText()+""+ data.get(i).getPrecio());
+        link.setText(link.getText()+""+data.get(i).getLink());
 
 
 

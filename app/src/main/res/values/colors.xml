@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#323232</color>
     <color name="colorPrimaryDark">#484848</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
     <color name="background_footer_item_grid_categorias">#90000000</color>
 
     <color name="color_light">#ffffff</color>
@@ -17,7 +17,7 @@
     <color name="Red">#5865f6</color>
     <color name="Black">#000000</color>
     <color name="TareasNote">#f9e539</color>
-    <color name="FBcolor">#457bee</color>
+    <color name="FBcolor">#07235f</color>
     <color name="YTcolor">#5ef356</color>
     <color name="event_color_01">#59dbe0</color>
     <color name="event_color_02">#f57f68</color>

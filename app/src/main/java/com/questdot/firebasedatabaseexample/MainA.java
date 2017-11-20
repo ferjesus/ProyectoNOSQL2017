@@ -54,12 +54,15 @@ public class MainA extends AppCompatActivity {
 
     public void Onclick(View v)
     {
-        Intent ven=new Intent(this,ProductosVistaActivity.class);
+        Intent ven=new Intent(this,MainActivity.class);
        startActivity(ven);
     }
     public void OnclickShop(View v)
     {
-        startActivity(new Intent("com.example.fer.gamestore.tabs.TabsMain"));
+        Intent ven=new Intent(this,Listaproductos.class);
+        startActivity(ven);
+
+        // startActivity(new Intent("com.example.fer.gamestore.tabs.TabsMain"));
     }
     public void OnclickCar(View v)
     {

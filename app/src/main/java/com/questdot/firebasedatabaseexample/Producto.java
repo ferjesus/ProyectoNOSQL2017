@@ -4,19 +4,19 @@ public class Producto {
 
     String key;
 
-    String nombre;
+    String name;
     int precio;
     String link;
 
-    /*public Producto(String key, String nombre, int precio) {
+    public Producto(String key, String nombre1, int precio) {
         this.key = key;
-        this.nombre = nombre;
+        this.name = nombre1;
         this.precio = precio;
 
-    }*/
-    public Producto(String key, String nombre, int precio,String link) {
+    }
+    public Producto(String key, String nombre1, int precio,String link) {
         this.key = key;
-        this.nombre = nombre;
+        this.name = nombre1;
 
         this.precio = precio;
         this.link = link;
@@ -31,7 +31,10 @@ public class Producto {
     }
 
     public String getName() {
-        return nombre;
+        return name;
+    }
+    public String getnombre() {
+        return name;
     }
 
 

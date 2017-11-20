@@ -37,6 +37,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".Listaproductos"
+            android:label="Administrar Productos">
+            <intent-filter>
+                <action android:name="com.questdot.firebasedatabaseexample.Listaproductos" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
