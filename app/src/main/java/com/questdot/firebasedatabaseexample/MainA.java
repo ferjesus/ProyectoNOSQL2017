@@ -63,8 +63,9 @@ public class MainA extends AppCompatActivity {
     }
     public void OnclickCar(View v)
     {
-        startActivity(new Intent("com.example.fer.gamestore.carro.TabsMainC"));
-    }
+
+        Intent ven=new Intent(this,ProductosVistaActivity.class);
+        startActivity(ven);    }
 
 
     public int getImage(String imageName) {
