@@ -1,6 +1,7 @@
 package com.questdot.firebasedatabaseexample;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
@@ -181,6 +182,12 @@ public class ProductosVistaActivity extends Activity {
         });
 
         realtimeUpdate();
+    }
+
+    public void Onclickhome(View v)
+    {
+        Intent ven=new Intent(this,MainA.class);
+        startActivity(ven);
     }
 
     public void realtimeUpdate(){
