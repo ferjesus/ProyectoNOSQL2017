@@ -8,7 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainA">
+        <activity android:name=".MainA"
+
+            android:label="@string/app_name"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +22,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="PRODUCTOS">
+            android:label="Menu">
             <intent-filter>
                 <action android:name="com.questdot.firebasedatabaseexample.MainActivity" />
 
