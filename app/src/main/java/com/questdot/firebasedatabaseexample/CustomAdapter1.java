@@ -56,7 +56,7 @@ public class CustomAdapter1 extends BaseAdapter {
         link = (TextView) view.findViewById(R.id.readlink);
         imagen = (ImageView) view.findViewById(R.id.imageView);
 
-        name.setText(name.getText()+""+data.get(i).getnombre());
+        name.setText(data.get(i).getnombre());
         precio.setText(precio.getText()+""+ data.get(i).getPrecio());
         //link.setText(link.getText()+""+data.get(i).getLink());
         Glide.with(context).load(data.get(i).getLink()).centerCrop().into(imagen);

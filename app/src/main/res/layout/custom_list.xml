@@ -3,11 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <TextView
         android:id="@+id/readname"
         android:layout_width="match_parent"
@@ -16,16 +11,23 @@
         android:layout_gravity="center"
         android:padding="5dp"
         android:text="Nombre: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/FBcolor"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
         android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
     <TextView
         android:id="@+id/readage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="Precio: "
+        android:text="S/: "
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@color/FBcolor"
         android:textStyle="bold" />
