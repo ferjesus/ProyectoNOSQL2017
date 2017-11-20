@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class ProductosVistaActivity extends Activity {
 
-    LayoutInflater inflater1dfdfdf;
+    LayoutInflater inflater1dfdfdasdadadasdadsasdasdadsf;
 
     int count =0;
     int age;
