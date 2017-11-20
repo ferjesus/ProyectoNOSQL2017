@@ -8,12 +8,12 @@ public class Producto {
     int precio;
     String link;
 
-    public Producto(String key, String nombre, int precio) {
+    /*public Producto(String key, String nombre, int precio) {
         this.key = key;
         this.nombre = nombre;
-
         this.precio = precio;
-    }
+
+    }*/
     public Producto(String key, String nombre, int precio,String link) {
         this.key = key;
         this.nombre = nombre;
@@ -25,8 +25,6 @@ public class Producto {
 
     public Producto() {
     }
-
-
 
     public String getKey() {
         return key;

@@ -26,8 +26,9 @@ public class ProductosVistaActivity extends Activity {
     LayoutInflater inflater1dfdfdasdadadasdadsasdasdadsf;
 
     int count =0;
-    int age;
+    int price;
     String name;
+    String url;
 
     EditText txtname, txtprecio,txtsearch,txtlink;
 
@@ -68,6 +69,7 @@ public class ProductosVistaActivity extends Activity {
                     try {
 
                         name = txtname.getText().toString().trim();
+                        url = txtlink.getText().toString().trim();
 
 
                         if (TextUtils.isEmpty(name) ) {
@@ -76,17 +78,17 @@ public class ProductosVistaActivity extends Activity {
 
                         } else {
 
-                            age = Integer.parseInt(txtprecio.getText().toString().trim());
+                            price = Integer.parseInt(txtprecio.getText().toString().trim());
 
-                            data = new Producto(databaseReference.push().getKey(), name, age);
+                            data = new Producto(databaseReference.push().getKey(), name, price, url);
 
                             databaseReference.child(data.getKey()).setValue(data);
 
-                            Toast.makeText(getApplicationContext(), "Resgistrado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Resgistrado!!!", Toast.LENGTH_SHORT).show();
 
                             txtname.setText("");
                             txtprecio.setText("");
-
+                            txtlink.setText("");
                         }
                     } catch (Exception e) {
 
