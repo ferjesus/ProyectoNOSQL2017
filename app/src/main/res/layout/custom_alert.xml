@@ -6,11 +6,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/Grey"
             android:orientation="vertical">
 
             <EditText
@@ -27,17 +29,23 @@
                 android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/Red"
                 android:gravity="center"
-                android:text="Update"
-              />
+                android:text="ACTUALIZAR"
+                android:textColor="@color/White"
+                android:textColorHint="@color/White"
+                android:textColorLink="@color/White" />
 
             <Button
                 android:id="@+id/delete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/Red"
                 android:gravity="center"
-                android:text="Delete"
-                />
+                android:text="ELIMINAR"
+                android:textColor="@color/White" />
 
         </LinearLayout>
 
