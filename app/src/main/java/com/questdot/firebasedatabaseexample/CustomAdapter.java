@@ -45,7 +45,7 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        view = inflater.from(context).inflate(R.layout.custom_list,viewGroup,false);
+        view = inflater.from(context).inflate(R.layout.custom_listu,viewGroup,false);
 
         name = (TextView) view.findViewById(R.id.readname);
         age = (TextView) view.findViewById(R.id.readage);

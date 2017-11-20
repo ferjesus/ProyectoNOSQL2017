@@ -14,14 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="USUARIOS"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:typeface="serif" />
         <EditText
             android:id="@+id/writename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:gravity="center"
-            android:hint="Enter Name"
+            android:hint="Ingresar Nombre"
             />
 
         <EditText
@@ -30,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:gravity="center"
-            android:hint="Enter Age"
+            android:hint="Ingresar Edad"
             android:inputType="number"
             />
 
@@ -39,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Add"
+            android:text="Registrar"
 
             android:textStyle="bold" />
 
@@ -58,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_weight="1"
-                android:text="Search"
+                android:text="Buscar"
                 android:id="@+id/btn_search"/>
         </LinearLayout>
 

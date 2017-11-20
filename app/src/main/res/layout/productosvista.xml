@@ -15,6 +15,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="AGREGAR NUEVO PRODUCTO"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
         <EditText
             android:id="@+id/pnombre"
             android:layout_width="match_parent"
@@ -54,21 +66,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
             <EditText
+                android:id="@+id/search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 android:layout_weight="2"
-                android:id="@+id/search"/>
+                android:textSize="20sp" />
+
             <Button
+                android:id="@+id/btn_search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 android:layout_weight="1"
                 android:text="Search"
-                android:id="@+id/btn_search"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
 

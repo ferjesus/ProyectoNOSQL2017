@@ -1,6 +1,7 @@
 package com.questdot.firebasedatabaseexample;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
@@ -37,7 +38,7 @@ public class Listaproductos extends Activity {
 
     Producto data;
 
-
+Context c = this;
     ListView listView;
 
     ArrayList<Producto> dataArrayList;
@@ -105,7 +106,6 @@ public class Listaproductos extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                final String imagen1 = dataArrayList.get(temp).getLink();
                 final View v = inflater1.from(getApplicationContext()).inflate(R.layout.custom_alert, null);
                 temp = i;
 
@@ -117,7 +117,8 @@ public class Listaproductos extends Activity {
 
                 final AlertDialog.Builder builder  = new AlertDialog.Builder(Listaproductos.this).setView(v);
                 final AlertDialog alert = builder.create();
-
+                final String imagen1 = dataArrayList.get(temp).getLink();
+                Toast.makeText(c,  imagen1, Toast.LENGTH_LONG).show();
                 v.findViewById(R.id.update).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
